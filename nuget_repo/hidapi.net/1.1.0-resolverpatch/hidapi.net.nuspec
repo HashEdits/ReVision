@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>HidApi.Net</id>
+    <version>1.1.0-resolverpatch</version>
+    <authors>Marcel Tiede</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <readme>readme.md</readme>
+    <projectUrl>https://github.com/badcel/HidApi.Net</projectUrl>
+    <description>A modern cross platform C# binding for HIDAPI</description>
+    <copyright>Marcel Tiede</copyright>
+    <tags>hid usb binding</tags>
+    <repository type="git" url="https://github.com/badcel/HidApi.Net.git" branch="refs/heads/main" commit="ca300b23145f4c2689f382413f66e8c440562295" />
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="WCharT.Net" version="0.1.2" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net7.0">
+        <dependency id="WCharT.Net" version="0.1.2" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net8.0">
+        <dependency id="WCharT.Net" version="0.1.2" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <!-- ILRepack -->
+    <Target Name="ILRepacker" AfterTargets="Build">
+        <ItemGroup>
+            <InputAssemblies Include="$(OutputPath)\EmbedIO.dll" />
+            <InputAssemblies Include="$(OutputPath)\Swan.Lite.dll" />
+            <InputAssemblies Include="$(OutputPath)\SixLabors.ImageSharp.dll" />
+            <InputAssemblies Include="$(OutputPath)\ReVision.MJPEG.dll" />
+        </ItemGroup>
+
+        <ILRepack
+                Parallel="true"
+                Internalize="true"
+                InternalizeExclude="@(DoNotInternalizeAssemblies)"
+                InputAssemblies="@(InputAssemblies)"
+                TargetKind="Dll"
+                OutputFile="$(OutputPath)\$(AssemblyName).dll"
+        />
+    </Target>
+    <!-- /ILRepack -->
+</Project>

@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="HidApi.Net" Version="1.1.0-resolverpatch" />
+      <PackageReference Include="ILRepack.Lib.MSBuild.Task" Version="2.0.34.2">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="LibUsbDotNet" Version="3.0.165-alpha" />
+      <PackageReference Include="System.IO.Hashing" Version="9.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ReVision.Core\ReVision.Core.csproj" />
+    </ItemGroup>
+
+</Project>

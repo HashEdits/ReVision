@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <!-- ILRepack -->
+    <Target Name="ILRepacker" AfterTargets="Build">
+        <ItemGroup>
+            <InputAssemblies Include="$(OutputPath)\ReVision.Vive.dll" />
+            <InputAssemblies Include="$(OutputPath)\System.IO.Hashing.dll" />
+            <InputAssemblies Include="$(OutputPath)\LibUsbDotNet.dll" />
+            <InputAssemblies Include="$(OutputPath)\HidApi.Net.dll" />
+            <InputAssemblies Include="$(OutputPath)\WCharT.Net.dll" />
+        </ItemGroup>
+
+        <ILRepack
+                Parallel="true"
+                Internalize="true"
+                InternalizeExclude="@(DoNotInternalizeAssemblies)"
+                InputAssemblies="@(InputAssemblies)"
+                TargetKind="Dll"
+                OutputFile="$(OutputPath)\$(AssemblyName).dll"
+        />
+    </Target>
+    <!-- /ILRepack -->
+</Project>
